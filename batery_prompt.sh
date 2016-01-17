@@ -2,7 +2,7 @@
 
 nodename=`uname -n`
 
-if [[ ${nodename} -eq "lenovo" ]]; then
+if [[ ${nodename} = "lenovo" ]]; then
   # BATDIR is the folder with your battery characteristics
   BATDIR="/sys/class/power_supply/BAT0"
   max=`cat $BATDIR/energy_full`
@@ -20,8 +20,8 @@ if [[ ${nodename} -eq "lenovo" ]]; then
   fi
 
 else
-  $percent="PC";
-  $color=$color_grey;
+  percent="PC";
+  color=$color_grey;
 fi
 
 echo $color$percent$color_reset
