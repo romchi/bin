@@ -152,3 +152,7 @@ install() {
   printf "${NORMAL}"
   env zsh
 }
+
+run_check
+run_prepare
+install
