@@ -68,18 +68,21 @@ run_prepare() {
   printf "${GREEN}Prepare BIN catalog${NORMAL}"
   if [ -d ~/bin ]; then
     printf "${YELLOW}BIN catalog exist. Moving it to bin.OLD${NORMAL}\n"
+    rm -rf ~/bin.OLD
     mv ~/bin ~/bin.OLD
   fi
 
   printf "${GREEN}Preparing .ZSHRC ${NORMAL}\n"
   if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
     printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.OLD${NORMAL}\n"
+    rm -rf ~/.zshrc.OLD
     mv ~/.zshrc ~/.zshrc.OLD
   fi
 
   printf "${GREEN}Prepare VIM${NORMAL}"
   if [ -d ~/.vim ]; then
     printf "${YELLOW}.vim catalog exist. Moving it to .vim.OLD${NORMAL}\n"
+    rm -rf ~/.vim.OLD
     mv ~/.vim ~/.vim.OLD
   fi
 }
@@ -90,7 +93,8 @@ install() {
     printf "Error: git clone of bin repo failed\n"
     exit 1
   }
-  chmod -r 700 ~/bin/.
+  
+  chmod u=rwx,g=,o= -R ~/bin/.
 
   printf "${GREEN}Clone oh-my-zsh ${NORMAL}\n"
   env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH || {
