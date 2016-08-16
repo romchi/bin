@@ -68,19 +68,19 @@ run_prepare() {
   printf "${GREEN}Prepare BIN catalog${NORMAL}"
   if [ -d ~/bin ]; then
     printf "${YELLOW}BIN catalog exist. Moving it to bin.OLD${NORMAL}\n"
-    mv ~/bin ~/bin.OLD
+    rm -rf ~/bin
   fi
 
   printf "${GREEN}Preparing .ZSHRC ${NORMAL}\n"
   if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
     printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.OLD${NORMAL}\n"
-    mv ~/.zshrc ~/.zshrc.OLD
+    rm -rf ~/.zshrc
   fi
 
   printf "${GREEN}Prepare VIM${NORMAL}"
   if [ -d ~/.vim ]; then
     printf "${YELLOW}.vim catalog exist. Moving it to .vim.OLD${NORMAL}\n"
-    mv ~/.vim ~/.vim.OLD
+    rm -rf ~/.vim
   fi
 }
 
@@ -117,7 +117,7 @@ install() {
   }
 
   printf "${GREEN}Copy new .vimrc to ~/.vimrc ${NORMAL}\n"
-  cp ~/.vim/.vimrc ~/.vimrc
+  ln -s ~/.vim/.vimrc ~/.vimrc
 
   printf "${GREEN}Clone VUNDLE ${NORMAL}\n"
   env git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim ||{
@@ -129,7 +129,7 @@ install() {
   vim +PluginInstall +qall
 
   printf "${GREEN}Using the Oh My Zsh template file and adding it to ~/.zshrc${NORMAL}\n"
-  cp $ZSH/custom/.zshrc ~/.zshrc
+  ln -s $ZSH/custom/.zshrc ~/.zshrc
   sed "/^export ZSH=/ c\\
   export ZSH=$ZSH
   " ~/.zshrc > ~/.zshrc-omztemp
