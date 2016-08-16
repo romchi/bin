@@ -90,7 +90,8 @@ install() {
     printf "Error: git clone of bin repo failed\n"
     exit 1
   }
-  chmod -r 700 ~/bin/.
+  
+  chmod u=rwx,g=,o= -R ~/bin/.
 
   printf "${GREEN}Clone oh-my-zsh ${NORMAL}\n"
   env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH || {
@@ -152,3 +153,7 @@ install() {
   printf "${NORMAL}"
   env zsh
 }
+
+run_check
+run_prepare
+install
