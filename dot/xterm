@@ -1,0 +1,41 @@
+xterm*termName:         xterm-256color
+XTerm*locale:           true
+XTerm*metaSendsEscape:  true
+Xterm*saveLines:        16400
+XTerm*scrollBar:        false
+XTerm*loginShell:       true
+XTerm*visualBell:       true
+
+XTerm*foreground:       rgb:b2/b2/b2
+XTerm*background:       rgb:08/08/08
+XTerm*color0:           rgb:28/28/28
+
+XTerm*transparent:      true
+XTerm*trsb:             true
+XTerm*shading:          75
+XTerm*bottomTabbar:     false
+
+!xterm*faceName: Liberation Mono:size=7:antialias=false
+!xterm*font: 7x10
+
+!Xft.dpi: 96
+!Xft.antialias: true
+!Xft.hinting: full
+!Xft.lcdfilter: lcdlegacy
+!Xft.hintstyle: hintfull
+!!Xft.hintstyle: hintslight
+!Xft.rgba: rgb
+
+!xterm*faceName: 	DejaVu Sans Mono:style=Book:antialias=false
+!xterm*faceNameDoublesize: WenQuanYi Bitmap Song
+!xterm*faceSize: 	9
+
+! Forbid bold font faces; bold type is light blue.
+XTerm*colorBDMode:      true
+XTerm*colorBD:          rgb:82/a4/d3
+! Do not underscore text, underlined text is white.
+XTerm*colorULMode:      true
+XTerm*colorUL:          rgb:e4/e4/e4
+
+xterm*bellIsUrgent:     false
+xterm*borderWidth:      0

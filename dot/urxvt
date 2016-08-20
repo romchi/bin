@@ -1,0 +1,97 @@
+URxvt.termName:                 rxvt-unicode-256color
+!URxvt.title:                   urxvt
+URxvt.saveLines:                16000
+URxvt.urgentOnBell:             False
+
+URxvt.fading:                   40
+URxvt.shading:                  100
+URxvt.transparent:              False
+
+URxvt.print-pipe:               "cat > /dev/null"
+
+URxvt.geometry:                 90x30
+URxvt.internalBorder:           5
+URxvt.lineSpace:                0
+URxvt.letterSpace:              0
+
+URxvt.cursorBlink:              True
+URxvt.cursorUnderline:          True
+
+URxvt.scrollBar:                False
+URxvt.scrollstyle:              plain
+URxvt*scrollTtyOutput:          False
+URxvt*scrollTtyKeypress:        True
+URxvt*scrollWithBuffer:         True
+URxvt*secondaryScroll:          True
+!URxvt.jumpScroll:              True
+URxvt.scrollBar_right:          False
+URxvt.scrollBar_floating:       True
+
+URxvt.font:                     xft:Mono:pixelsize=12, xft:Kochi Gothic:antialias=false, xft:Code2000:antialias=false
+!URxvt*faceName:                DejaVu Sans Mono:style=Book:antialias=false
+!URxvt*faceNameDoublesize:      WenQuanYi Bitmap Song
+!URxvt*faceSize:                11
+
+URxvt.background:               #000000
+URxvt.foreground:               #D0D0D0
+URxvt.color0:                   #2E3436
+URxvt.color1:                   #CC0000
+URxvt.color2:                   #4E9A06
+URxvt.color3:                   #C4A000
+URxvt.color4:                   #3465A4
+URxvt.color5:                   #75507B
+URxvt.color6:                   #06989A
+URxvt.color7:                   #D3D7CF
+URxvt.color8:                   #555753
+URxvt.color9:                   #EF2929
+URxvt.color10:                  #8AE234
+URxvt.color11:                  #FCE94F
+URxvt.color12:                  #729FCF
+URxvt.color13:                  #AD7FA8
+URxvt.color14:                  #34E2E2
+URxvt.color15:                  #EEEEEC
+
+URxvt.colorMode:                on
+URxvt.boldColors:               on
+URxvt.dynamicColors:            off
+URxvt.colorULMode:              on
+URxvt.underLine:                off
+URxvt.colorBDMode:              on
+URxvt.colorBD:                  cyan
+
+! Extensions
+URxvt.perl-ext-common:          default,tabbedex,clipboard,url-select,keyboard-select
+
+!URxvt.keysym.M-c:               perl:clipboard:copy
+!URxvt.keysym.M-v:               perl:clipboard:paste
+!URxvt.keysym.M-C-v:             perl:clipboard:paste_escaped
+
+URxvt.clipboard.copycmd:        xsel -ib
+URxvt.clipboard.pastecmd:       xsel -ob
+
+! tabbedex
+URxvt.tabbed.new-button:        no
+URxvt.tabbed.autohide:          no
+URxvt.tabbed.no-tabbedex-keys:  no
+URxvt.tabbed.tabbar-fg:         15
+URxvt.tabbed.tabbar-bg:         8
+URxvt.tabbed.tab-fg:            8
+URxvt.tabbed.tab-bg:            14
+URxvt.tabbed.bell-tab-fg:       255
+URxvt.tabbed.bell-tab-bg:       160
+URxvt.tabbed.bell-fg:           244
+URxvt.tabbed.bell-bg:           17
+URxvt.tabbed.title-fg:          15
+URxvt.tabbed.title-bg:          8
+URxvt.keysym.4-1-Down:          perl:tabbedex:new_tab
+URxvt.keysym.4-1-Left:          perl:tabbedex:prev_tab
+URxvt.keysym.4-1-Right:         perl:tabbedex:next_tab
+URxvt.keysym.4-1-Up:            perl:tabbedex:rename_tab
+URxvt.keysym.4-1-C-Left:        perl:tabbedex:move_tab_left
+URxvt.keysym.4-1-C-Right:       perl:tabbedex:move_tab_right
+
+URxvt.url-select.launcher:      google-chrome-stable
+URxvt.url-select.underline:     true
+URxvt.keysym.M-u:               perl:url-select:select_next
+URxvt.keysym.M-Escape:          perl:keyboard-select:activate
+URxvt.keysym.M-s:               perl:keyboard-select:search

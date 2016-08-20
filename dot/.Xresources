@@ -1,0 +1,6 @@
+!xrdb ~/.Xresources
+
+#include "bin/dot/urxvt"
+#include "bin/dot/rofi"
+#include "bin/dot/xft"
+#include "bin/dot/xterm"
