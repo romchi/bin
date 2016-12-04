@@ -40,22 +40,6 @@ if [ ! -n "$ZSH" ]; then
 fi
 
 run_check() {
-  printf "${GREEN}Checking installed ZSH.${NORMAL}"
-  CHECK_ZSH_INSTALLED=$(grep /zsh$ /etc/shells | wc -l)
-  if [ ! $CHECK_ZSH_INSTALLED -ge 1 ]; then
-    printf "${YELLOW}Zsh is not installed!${NORMAL} Please install zsh first!\n"
-    exit 1
-  fi
-
-  unset CHECK_ZSH_INSTALLED
-
-  printf "${GREEN}Checking installed OH-MY-ZSH.${NORMAL}"
-  if [ -d "$ZSH" ]; then
-    printf "${YELLOW}You already have Oh My Zsh installed.${NORMAL}\n"
-    printf "You'll need to remove $ZSH if you want to re-install.\n"
-    exit 1
-  fi
-
   printf "${GREEN}Checking installed GIT.${NORMAL}"
   hash git >/dev/null 2>&1 || {
     echo "Error: git is not installed"
@@ -67,20 +51,32 @@ run_prepare() {
   # remove dirs to backup if they exist
   printf "${GREEN}Prepare BIN catalog${NORMAL}"
   if [ -d ~/bin ]; then
-    printf "${YELLOW}BIN catalog exist. Moving it to bin.OLD${NORMAL}\n"
+    printf "${YELLOW}BIN catalog exist. Delete it${NORMAL}\n"
     rm -rf ~/bin
   fi
 
   printf "${GREEN}Preparing .ZSHRC ${NORMAL}\n"
   if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
-    printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.OLD${NORMAL}\n"
+    printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}delete it${NORMAL}\n"
     rm -rf ~/.zshrc
+  fi
+
+  printf "${GREEN}Preparing .ZSH ${NORMAL}\n"
+  if [ -d ~/.zsh ] || [ -h ~/.zsh ]; then
+    printf "${YELLOW}Found ~/.zsh.${NORMAL} ${GREEN}delete it${NORMAL}\n"
+    rm -rf ~/.zsh
   fi
 
   printf "${GREEN}Prepare VIM${NORMAL}"
   if [ -d ~/.vim ]; then
-    printf "${YELLOW}.vim catalog exist. Moving it to .vim.OLD${NORMAL}\n"
+    printf "${YELLOW}.vim catalog exist. Delete it${NORMAL}\n"
     rm -rf ~/.vim
+  fi
+
+  printf "${GREEN}Prepare VIM${NORMAL}"
+  if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
+    printf "${YELLOW}.vimrc exist. Delete it${NORMAL}\n"
+    rm -rf ~/.vimrc
   fi
 }
 
