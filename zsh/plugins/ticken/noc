@@ -1,0 +1,20 @@
+function noc {
+  if [ "$1" == "--force" ]; then
+    killall -9 -q ssh-agent
+    rm -f "${HOME}/.ssh/etoken"
+  fi
+
+  if [ "$EUID" -ne 0 ]; then
+    if [ `lsusb -d 0529:0620 > /dev/null ; echo $?` -eq 0 ]; then
+      if [ `ps -C ssh-agent -o cmd= | grep -ie 'ssh-agent -s -a .*etoken$' > /dev/null ; echo $?` -ne 0 ]; then
+        rm -f "${HOME}/.ssh/etoken"
+        eval `ssh-agent -s -a "${HOME}/.ssh/etoken"` > /dev/null 2>&1
+      fi
+      export SSH_AUTH_SOCK="${HOME}/.ssh/etoken"
+      if [ -z "`ssh-add -l | grep -i libeTPkcs11`" ]; then
+        ssh-add -s /usr/lib/libeTPkcs11.so
+      fi
+      ssh -2 -4 -k -A -p 2211 noc.mirohost.net
+    fi
+  fi
+}
