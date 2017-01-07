@@ -6,12 +6,13 @@
 [merge]
   conflictstyle = diff3
 [alias]
-  st = status
+  st = status -sb
   ci = commit
   br = branch
   co = checkout
   df = diff
   lg = log --oneline --graph --decorate
+  cm = commit -m
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -28,5 +29,23 @@
 [core]
   pager = less -SR
 	editor = vim
+	excludesfile = ~/.gitignore
+	whitespace = trailing-space,space-before-tab
 [color]
 	ui = true
+	branch = true
+  diff = true
+  grep = true
+  interactive = true
+  pager = true
+  showbranch = true
+  status = true
+  ui = true
+[sendemail]
+	confirm = auto
+	smtpencryption = none
+  smtpserver = localhost
+  smtpserverport = 25
+  smtppass = ''
+  smtpuser = ''
+
