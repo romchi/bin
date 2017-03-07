@@ -3,7 +3,7 @@ ZSH_THEME="romchi"
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
 DISABLE_UPDATE_PROMPT="true"
@@ -21,6 +21,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
+export GNUPGHOME='/home/rb/lo.work/RomanBulakh/gpg'
 
 if [[ $(hostname) == "lenovo" ]]; then
   plugins=(git ssh-agent git-prompt)
