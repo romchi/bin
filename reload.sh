@@ -26,7 +26,7 @@ done
 #	fi
 #fi
 
-SSH_ENV="$HOME/.ssh/environment-lenovo"
+SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
   echo "Initialising new SSH agent..."
@@ -34,7 +34,7 @@ function start_agent {
   (umask 066; /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}")
   . "${SSH_ENV}"
   /usr/bin/ssh-add
-	/usr/bin/ssh-add -s /usr/lib/libeToken.so
+  /usr/bin/ssh-add -s /usr/lib/libeToken.so
   for i in $(cut -d\; -f1 "${SSH_ENV}" | grep -v '#'); do
     export $i;
   done

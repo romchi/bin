@@ -1,7 +1,7 @@
-# [Created by task 2.1.2 3/17/2015 15:30:10]
+# [Created by task 2.5.1 9/22/2017 17:07:06]
 # Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
-# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
 
 # Here is an example of entries that use the default, override and blank values
 #   variable=foo   -- By specifying a value, this overrides the default
@@ -12,4 +12,27 @@
 
 # Files
 data.location=~/lo.work/RomanBulakh/tasks
+
 regex=on
+detection=on
+confirmation=yes
+
+reserved.lines=4
+
+hooks=on
+editor=vi
+
+dateformat=Y-M-D
+dateformat.holiday=YMD
+dateformat.edit=Y-M-D H:N
+dateformat.info=Y-M-D H:N
+
+weekstart=Monday
+displayweeknumber=yes
+
+due=14
+
+# Color theme (uncomment one to use)
+include /usr/share/doc/task/rc/dark-256.theme
+#include /usr/share/doc/task/rc/dark-gray-256.theme
+#include /usr/share/doc/task/rc/dark-gray-blue-256.theme

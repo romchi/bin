@@ -6,6 +6,16 @@ if (cp /dev/null "${errorlog}"); then
   exec >"${errorlog}" 2>&1
 fi
 
-wmname LG3D
+#xrdb ~/.Xresources
+-f ~/.Xresources  && xrdb -merge ~/.Xresources
+
+# disable beep
+# setterm -blength 0
+
+# disable screen 
+# xset s 300 5
+
+#wmname LG3D
+#setxkbmap -layout us,ru -variant -option grp:caps_toggle
 
 exec dbus-launch --sh-syntax --exit-with-session awesome

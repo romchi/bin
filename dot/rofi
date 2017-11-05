@@ -49,7 +49,7 @@ rofi.fuzzy:                         false
 
 rofi.kb-primary-paste:              Control+Shift+v,Shift+Insert
 rofi.kb-secondary-paste:            Control+v,Insert
-rofi.kb-clear-line:                 Control+u
+;rofi.kb-clear-line:                 Control+u
 rofi.kb-move-front:                 Control+a
 rofi.kb-move-end:                   Control+e
 rofi.kb-move-word-back:             Alt+b
