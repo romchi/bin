@@ -12,7 +12,7 @@ URxvt.print-pipe:               "cat > /dev/null"
 URxvt.geometry:                 90x30
 URxvt.internalBorder:           5
 URxvt.lineSpace:                0
-URxvt.letterSpace:          	0
+URxvt.letterSpace:          	  0
 
 URxvt.cursorBlink:              True
 URxvt.cursorUnderline:          True
@@ -27,13 +27,6 @@ URxvt*secondaryScroll:          True
 URxvt.scrollBar_right:          False
 URxvt.scrollBar_floating:       True
 
-!URxvt.font:                    xft:Mono:pixelsize=12, xft:Kochi Gothic:antialias=false, xft:Code2000:antialias=false
-!URxvt.font:                    Liberation Mono:size=7:antialias=false
-!URxvt.font: 		                xft:Bitstream Vera Sans Mono-8	
-!URxvt*faceNameDoublesize:      WenQuanYi Bitmap Song
-!URxvt*faceSize:                11
-!URxvt.font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-1
-!URxvt.font: xft:monaco:size=10
 URxvt.font: xft:Droid Sans Mono:size=9:autohint=false:antialias=true:hinting=true 
 URxvt.boldFont: xft:Droid Sans Mono:size=9:autohint=false:antialias=true:hinting=true 
 URxvt.italicFont: xft:droid sans mono:italic:size=9:autohint=true 
@@ -68,10 +61,6 @@ URxvt.colorBD:                  cyan
 
 ! Extensions
 URxvt.perl-ext-common:          default,tabbedex,clipboard,url-select,keyboard-select
-
-!URxvt.keysym.M-c:               perl:clipboard:copy
-!URxvt.keysym.M-v:               perl:clipboard:paste
-!URxvt.keysym.M-C-v:             perl:clipboard:paste_escaped
 
 URxvt.clipboard.copycmd:        xsel -ib
 URxvt.clipboard.pastecmd:       xsel -ob

@@ -1,4 +1,9 @@
-ZSH_THEME="romchi"
+#ZSH_THEME="romchi"
+#ZSH_THEME="ys"
+#ZSH_THEME="xiong-chiamiov"
+#ZSH_THEME="tjkirch_mod"
+#ZSH_THEME="tjkirch"
+ZSH_THEME="takashiyoshida"
 
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
@@ -6,7 +11,7 @@ HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_UPDATE="false"
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
-DISABLE_UPDATE_PROMPT="true"
+# DISABLE_UPDATE_PROMPT="true"
 
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="false"
@@ -22,16 +27,25 @@ export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
 export GNUPGHOME='/home/rb/lo.work/RomanBulakh/gpg'
+export UPDATE_ZSH_DAYS=1
+export SSH_KEY_PATH="~/.ssh/id_rsa"
+export QT_GRAPHICSSYSTEM='opengl'
+export SSH_ENV="$HOME/.ssh/environment"
 
-if [[ $(hostname) == "lenovo" ]]; then
+if [[ $(hostname) == "hp.lo" ]]; then
   plugins=(git ssh-agent git-prompt)
+  if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+  fi
   zstyle :omz:plugins:ssh-agent agent-forwarding on
 else
   plugins=(git git-prompt)
-
   if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/etoken" ] ; then
     ln -fs "$SSH_AUTH_SOCK" "$HOME/.ssh/etoken"
     export SSH_AUTH_SOCK="$HOME/.ssh/etoken"
+  fi
+  if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
   fi
 fi
 

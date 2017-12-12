@@ -87,15 +87,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"colorscheme monokai
-"colorscheme moriarty
-"set background=dark
-"set background=light
-"colorscheme landscape
-"colorscheme spacegray
-"colorscheme distinguished
-"colorscheme molokai
-"" colorscheme apprentice
 try
   colorscheme apprentice
 catch /^Vim\%((\a\+)\)\=:E185/

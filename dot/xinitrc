@@ -1,12 +1,14 @@
 errorlog="${HOME}/.xerrors"
 
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
 # Настройки логирования и запуск иксов с чистыми логами
 if (cp /dev/null "${errorlog}"); then
   chmod 600 "${errorlog}"
   exec >"${errorlog}" 2>&1
 fi
 
-#xrdb ~/.Xresources
 -f ~/.Xresources  && xrdb -merge ~/.Xresources
 
 # disable beep

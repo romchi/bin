@@ -6,24 +6,12 @@ rofi.font:                          snap 10
 rofi.fg:                            #505050
 rofi.bg:                            #000000
 
-!rofi.color-enabled:                 false
-!rofi.color-normal:                  #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
-!rofi.color-urgent:                  #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
-!rofi.color-active:                  #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
-!rofi.color-window:                  #fdf6e3,#002b36
-
-!rofi.color-enabled:                 true
-!rofi.color-window:                  #393939, #393939, #268bd2
-!rofi.color-normal:                  #393939, #ffffff, #393939, #268bd2, #ffffff
-!rofi.color-active:                  #393939, #268bd2, #393939, #268bd2, #205171
-!rofi.color-urgent:                  #393939, #f3843d, #393939, #268bd2, #ffc39c
-
-rofi.color-enabled:                  true
-rofi.color-normal:                   argb:00000000, #D8DEE9, argb:00000000, #FAC863, #1B2B34
-rofi.color-urgent:                   argb:00000000, #F99157, argb:00000000, #F99157, #1B2B34
-rofi.color-active:                   argb:00000000, #6699CC, argb:00000000, #6699CC, #1B2B34
-rofi.color-window:                   argb:ee222222, #FAC863, #FAC863
-rofi.separator-style:                solid
+rofi.color-enabled:                 true
+rofi.color-normal:                  argb:00000000, #D8DEE9, argb:00000000, #FAC863, #1B2B34
+rofi.color-urgent:                  argb:00000000, #F99157, argb:00000000, #F99157, #1B2B34
+rofi.color-active:                  argb:00000000, #6699CC, argb:00000000, #6699CC, #1B2B34
+rofi.color-window:                  argb:ee222222, #FAC863, #FAC863
+rofi.separator-style:               solid
 
 rofi.bw:                            1
 rofi.location:                      0
@@ -49,7 +37,6 @@ rofi.fuzzy:                         false
 
 rofi.kb-primary-paste:              Control+Shift+v,Shift+Insert
 rofi.kb-secondary-paste:            Control+v,Insert
-;rofi.kb-clear-line:                 Control+u
 rofi.kb-move-front:                 Control+a
 rofi.kb-move-end:                   Control+e
 rofi.kb-move-word-back:             Alt+b

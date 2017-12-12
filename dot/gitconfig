@@ -1,51 +1,51 @@
 [user]
-	email = bulah.roman@gmail.com
-	name = Roman Bulakh
+	email         = bulah.roman@gmail.com
+	name          = Roman Bulakh
 [push]
-	default = current
+	default       = current
 [merge]
   conflictstyle = diff3
 [alias]
-  st = status -sb
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  lg = log --oneline --graph --decorate
-  cm = commit -m
+  st            = status -sb
+  ci            = commit
+  br            = branch
+  co            = checkout
+  df            = diff
+  lg            = log --oneline --graph --decorate
+  cm            = commit -m
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+  current       = yellow reverse
+  local         = yellow
+  remote        = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+  meta          = yellow bold
+  frag          = magenta bold
+  old           = red bold
+  new           = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  added         = yellow
+  changed       = green
+  untracked     = cyan
 [core]
-  pager = less -SR
-	editor = vim
-	excludesfile = ~/.gitignore
-	whitespace = trailing-space,space-before-tab
+  pager         = less -SR
+	editor        = vim
+	excludesfile  = ~/.gitignore
+	whitespace    = trailing-space,space-before-tab
 [color]
-	ui = true
-	branch = true
-  diff = true
-  grep = true
-  interactive = true
-  pager = true
-  showbranch = true
-  status = true
-  ui = true
+	ui            = true
+	branch        = true
+  diff          = true
+  grep          = true
+  interactive   = true
+  pager         = true
+  showbranch    = true
+  status        = true
+  ui            = true
 [sendemail]
-	confirm = auto
+	confirm       = auto
 	smtpencryption = none
-  smtpserver = localhost
+  smtpserver    = localhost
   smtpserverport = 25
-  smtppass = ''
-  smtpuser = ''
+  smtppass      = ''
+  smtpuser      = ''
 
