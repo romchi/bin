@@ -72,6 +72,7 @@ Plugin 'aperezdc/vim-template'
 "Plugin 'chriskempson/vim-tomorrow-theme'
 "Plugin 'tomasr/molokai'
 Plugin 'romainl/apprentice'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
