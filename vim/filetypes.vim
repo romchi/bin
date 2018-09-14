@@ -23,6 +23,15 @@ autocmd FileType html,xhtml,xml,htmldjango,eruby,mako setlocal expandtab shiftwi
 autocmd BufNewFile,BufRead *.tmpl setlocal ft=htmljinja
 autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
 
+" Dockerfile
+"autocmd BufRead,BufNewFile Dockerfile* set ft=Dockerfile
+"autocmd BufRead,BufNewFile Dockerfile setf Dockerfile
+"autocmd BufRead,BufNewFile *.dock setf Dockerfile
+"autocmd BufRead,BufNewFile *.[Dd]ockerfile setf Dockerfile
+
+" docker-compose.yml
+autocmd BufRead,BufNewFile docker-compose*.{yaml,yml}* set ft=docker-compose
+
 let html_no_rendering=1
 let g:closetag_default_xml=1
 let g:sparkupNextMapping='<c-l>'

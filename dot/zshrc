@@ -31,15 +31,16 @@ export UPDATE_ZSH_DAYS=1
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 export QT_GRAPHICSSYSTEM='opengl'
 export SSH_ENV="$HOME/.ssh/environment"
+export GOPATH="$HOME/lo.work/go"
 
 if [[ $(hostname) == "hp.lo" ]]; then
-  plugins=(git ssh-agent git-prompt)
+  plugins=(ssh-agent git gitfast)
   if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
   fi
   zstyle :omz:plugins:ssh-agent agent-forwarding on
 else
-  plugins=(git git-prompt)
+  plugins=()
   if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/etoken" ] ; then
     ln -fs "$SSH_AUTH_SOCK" "$HOME/.ssh/etoken"
     export SSH_AUTH_SOCK="$HOME/.ssh/etoken"
@@ -47,6 +48,10 @@ else
   if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
   fi
+fi
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
 fi
 
 source $ZSH/oh-my-zsh.sh
