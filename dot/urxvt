@@ -27,10 +27,16 @@ URxvt*secondaryScroll:          True
 URxvt.scrollBar_right:          False
 URxvt.scrollBar_floating:       True
 
-URxvt.font: xft:Droid Sans Mono:size=9:autohint=false:antialias=true:hinting=true 
-URxvt.boldFont: xft:Droid Sans Mono:size=9:autohint=false:antialias=true:hinting=true 
-URxvt.italicFont: xft:droid sans mono:italic:size=9:autohint=true 
-URxvt.boldItalicFont: xft:droid sans mono:bold:italic:size=9:autohint=true 
+URxvt.font:             xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
+URxvt.boldFont:         xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
+!URxvt.italicFont:       xft:droid sans mono:italic:size=9:autohint=true 
+!URxvt.boldItalicFont:   xft:droid sans mono:bold:italic:size=9:autohint=true 
+
+!URxvt*font:               xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont:           xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+
+!URxvt.font:xft:Monospace:pixelsize=12
+!URxvt.boldfont:xft:Monospace-Bold:pixelsize=12
 
 URxvt.background:               #000000
 URxvt.foreground:               #D0D0D0

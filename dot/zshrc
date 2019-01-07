@@ -22,7 +22,7 @@ HISTFILE=~/.zhistory
 ZSH_CUSTOM=/home/rb/bin/zsh
 
 export ZSH=/home/rb/.zsh
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/openresty/bin:$HOME/lo.work/go/bin:$PATH
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
