@@ -23,7 +23,7 @@ set tabstop=4
 set smarttab
 set expandtab
 set smartindent
-set autoindent=0
+set autoindent
 " отключаем бэкапы и своп-файлы
 set nobackup 	     " no backup files
 set nowritebackup    " only in case you don't want a backup file while editing
@@ -106,5 +106,6 @@ source ~/.vim/nerdtree.vim
 source ~/.vim/tagbar.vim
 source ~/.vim/hotkeys.vim
 source ~/.vim/filetypes.vim
+source ~/.vim/vimgo.vim
 source ~/.vim/templates.vim
 source ~/.vim/neocomplete.vim
