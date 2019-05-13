@@ -48,3 +48,5 @@
     smtpserverport = 25
     smtppass      = ''
     smtpuser      = ''
+[url "git@git.bulakh.net:"]
+	insteadOf = https://git.bulakh.net/
