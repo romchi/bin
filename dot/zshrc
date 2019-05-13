@@ -32,6 +32,8 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 export QT_GRAPHICSSYSTEM='opengl'
 export SSH_ENV="$HOME/.ssh/environment"
 export GOPATH="$HOME/lo.work/go"
+export GO111MODULE=on
+export LS_COLORS='ex=00:su=00:sg=00:ca=00:'
 
 if [[ $(hostname) == "hp.lo" ]]; then
   plugins=(ssh-agent git gitfast)
