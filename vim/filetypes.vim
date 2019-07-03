@@ -3,9 +3,9 @@
 "=====================================================
 filetype plugin indent on
 " --- Python ---
-autocmd FileType python set completeopt-=preview tabstop=2 shiftwidth=2 " раскомментируйте, в случае, если не надо, чтобы jedi-vim показывал документацию по методу/классу
+autocmd FileType python set completeopt-=preview tabstop=4 shiftwidth=4 " раскомментируйте, в случае, если не надо, чтобы jedi-vim показывал документацию по методу/классу
 "autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 formatoptions+=croq softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-autocmd FileType pyrex setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 "" --- JavaScript ---
 "let javascript_enable_domhtmlcss=1
@@ -16,8 +16,8 @@ autocmd FileType pyrex setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 s
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " --- template language support (SGML / XML too) ---
-autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType html,xhtml,xml,htmldjango,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType html,xhtml,xml,htmldjango,eruby,mako setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 "autocmd bufnewfile,bufread *.rhtml setlocal ft=eruby
 "autocmd BufNewFile,BufRead *.mako setlocal ft=mako 
 autocmd BufNewFile,BufRead *.tmpl setlocal ft=htmljinja

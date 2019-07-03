@@ -4,6 +4,7 @@ aunmenu Window.
 let no_buffers_menu=1
 set mousemodel=popup
 set ruler
+set wildmenu
 set completeopt-=preview
 set gcr=a:blinkon0
 set ttyfast
@@ -18,7 +19,7 @@ set hlsearch	     " подсветка результатов поиска
 set scrolloff=5	     " 5 строк при скролле за раз
 " настройка на Tab
 set shiftwidth=4
-set softtabstop=0
+set softtabstop=4
 set tabstop=4
 set smarttab
 set expandtab
@@ -85,8 +86,8 @@ Plugin 'Shougo/neocomplete'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+filetype plugin on
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
