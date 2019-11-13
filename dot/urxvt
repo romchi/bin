@@ -1,4 +1,5 @@
-URxvt.termName:                 rxvt-unicode-256color
+!URxvt.termName:                 rxvt-unicode-256color
+URxvt.termName:                 rxvt-unicode
 !URxvt.title:                   urxvt
 URxvt.saveLines:                16000
 URxvt.urgentOnBell:             False
@@ -27,13 +28,20 @@ URxvt*secondaryScroll:          True
 URxvt.scrollBar_right:          False
 URxvt.scrollBar_floating:       True
 
-URxvt.font:             xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
-URxvt.boldFont:         xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
-!URxvt.italicFont:       xft:droid sans mono:italic:size=9:autohint=true 
-!URxvt.boldItalicFont:   xft:droid sans mono:bold:italic:size=9:autohint=true 
+!URxvt*font: xft:Terminus-8
+!URxvt.font:  -misc-fixed-*-*-*-*-15-*-*-*-*-*-koi8-*
 
-!URxvt*font:               xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-!URxvt*boldFont:           xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+!URxvt.font:                     xft:bitstream vera sans mono:size=11:antialias=true
+!URxvt.boldFont:                 xft:bitstream vera sans mono:bold:size=11:antialias=true
+
+URxvt.font:                    xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
+!URxvt.boldFont:                xft:Droid Sans Mono:size=9:autohint=true:antialias=true:hinting=true 
+
+!URxvt.italicFont:              xft:droid sans mono:italic:size=9:autohint=true 
+!URxvt.boldItalicFont:          xft:droid sans mono:bold:italic:size=9:autohint=true 
+
+!URxvt*font:                    xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont:                xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
 
 !URxvt.font:xft:Monospace:pixelsize=12
 !URxvt.boldfont:xft:Monospace-Bold:pixelsize=12
