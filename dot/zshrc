@@ -35,21 +35,16 @@ export GOPATH="$HOME/lo.work/go"
 export GO111MODULE=on
 export LS_COLORS='ex=00:su=00:sg=00:ca=00:'
 
-if [[ $(hostname) == "hp.lo" ]]; then
-  plugins=(ssh-agent git gitfast)
-  if [ -f "${SSH_ENV}" ]; then
-    . "${SSH_ENV}" > /dev/null
+export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+if ! ss -a | grep -q "$SSH_AUTH_SOCK"; then
+  rm -f "$SSH_AUTH_SOCK"
+  wsl2_ssh_pageant_bin="$HOME/.ssh/wsl2-ssh-pageant.exe"
+  if test -x "$wsl2_ssh_pageant_bin"; then
+    (setsid nohup socat UNIX-LISTEN:"$SSH_AUTH_SOCK,fork" EXEC:"$wsl2_ssh_pageant_bin" >/dev/null 2>&1 &)
+  else
+    echo >&2 "WARNING: $wsl2_ssh_pageant_bin is not executable."
   fi
-  zstyle :omz:plugins:ssh-agent agent-forwarding on
-else
-  plugins=()
-  if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/.ssh/etoken" ] ; then
-    ln -fs "$SSH_AUTH_SOCK" "$HOME/.ssh/etoken"
-    export SSH_AUTH_SOCK="$HOME/.ssh/etoken"
-  fi
-  if [ -f "${SSH_ENV}" ]; then
-    . "${SSH_ENV}" > /dev/null
-  fi
+  unset wsl2_ssh_pageant_bin
 fi
 
 if [ $commands[kubectl] ]; then
